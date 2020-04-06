@@ -35,11 +35,11 @@ app.post('/send', (req, res) => {
    // create reusable transporter object using the default SMTP transport
    let transporter = nodemailer.createTransport({
       secure: false, // true for 465, false for other ports
-      host: 'smtp.ethereal.email',
+      host: '',
       port: 587,
       auth: {
-         user: 'ernest.hilll@ethereal.email',
-         pass: 'jfnTJtSfGvnWBGTUmq'
+         user: '',
+         pass: ''
       },
       tls: {
          rejectUnauthorized: false
@@ -48,8 +48,8 @@ app.post('/send', (req, res) => {
 
    // send mail with defined transport object
    let info = transporter.sendMail({
-      from: '"Mohak Gadge" <ernest.hilll@ethereal.email>', // sender address
-      to: "mohakgadge@gmail.com", // list of receivers
+      from: '"Mohak Gadge" <>', // sender address
+      to: "test@gmail.com", // list of receivers
       subject: "nodemailer sample", // Subject line
       text: "Hello world?", // plain text body
       html: output // html body
